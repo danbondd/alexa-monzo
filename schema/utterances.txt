@@ -1,1 +1,2 @@
-SayHello to say hello
+GetBalance what my balance is
+GetBalance to get my balance

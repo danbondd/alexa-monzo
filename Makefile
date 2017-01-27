@@ -1,2 +1,2 @@
 zip:
-	zip lambda.zip lambda/*.py
+	zip -j lambda.zip lambda/*.py
