@@ -1,4 +1,4 @@
 import monzo 
 
-def get_balance(intent):
-    return monzo.build_response("your balance is zero")
+def get_balance(intent, accessToken):
+    return monzo.build_response(accessToken, "your balance is zero")
