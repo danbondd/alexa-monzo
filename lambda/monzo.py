@@ -7,16 +7,15 @@ def lambda_handler(event, context):
         return error_response()
 
     request_type = event['request']['type']
+    access_token = event['session']['user']['accessToken']
 
     if request_type == "IntentRequest":
-        return intent_request(event['request'])
+        return intent_request(event['request'], access_token)
     elif request_type == "LaunchRequest":
         print "LaunchRequest - No intent provided"
-        return build_response("Monzo - Welcome", "Welcome to Monzo! Get started by asking me about your balance or recent transactions.")
+        return build_response("Welcome", "Welcome to Monzo! Get started by asking me about your balance or recent transactions.")
 
-def intent_request(request):
-    # Temp workaround for OAuth issue
-    access_token = os.environ['ACCESS_TOKEN']
+def intent_request(request, access_token):
     account_id = os.environ['ACCOUNT_ID']
     intent = request['intent']
     intent_name = intent['name']
