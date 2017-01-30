@@ -24,7 +24,9 @@ def intent_request(request, access_token):
         return balance.get_balance(access_token, account_id)
     elif intent_name == "GetSpendToday":
         return balance.get_spend_today(access_token, account_id)
-    elif intent_name == "AMAZON.NoIntent":
+    elif intent_name == "AMAZON.HelpIntent":
+        return build_response("Help", "Try asking me about your balance, or recent transactions.")
+    else:
         return build_response("Invalid command", "I'm sorry, I didn't understand your request.")
 
 def build_response(title, output):
@@ -45,5 +47,5 @@ def build_response(title, output):
     }
 
 def error_response():
-    return build_response("Request error", "I'm sorry, your request could not be completed!")
+    return build_response("Request error", "I'm sorry, your request could not be completed.")
 
