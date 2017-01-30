@@ -3,19 +3,31 @@ import os
 
 def lambda_handler(event, context):
     if event['session']['application']['applicationId'] != os.environ['APP_ID']:
-        # Need to log and do something better here!
-        raise ValueError("Invalid Application ID")
+        print "Invalid Application ID"
+        return error_response()
 
-    accessToken = ""
+    request_type = event['request']['type']
 
-    if event['request']['type'] == "IntentRequest":
-        return intent_request(event['request'], accessToken)
+    if request_type == "IntentRequest":
+        return intent_request(event['request'])
+    elif request_type == "LaunchRequest":
+        # TODO
+        return build_response("", "")
+    elif request_type == "SessionEndedRequest":
+        # TODO
+        return build_response("", "")
 
-def intent_request(request, accessToken):
+def intent_request(request):
+    # Temp workaround for OAuth issue
+    access_token = os.environ['ACCESS_TOKEN']
+    account_id = os.environ['ACCOUNT_ID']
     intent = request['intent']
+    intent_name = intent['name']
 
-    if intent['name'] == "GetBalance":
-        return balance.get_balance(intent, accessToken)
+    if intent_name == "GetBalance":
+        return balance.get_balance(access_token, account_id)
+    elif intent_name == "AMAZON.NoIntent":
+        return build_response("Invalid command", "I'm sorry, I did not understand your request.")
 
 def build_response(title, output):
     return {
@@ -33,3 +45,7 @@ def build_response(title, output):
             'shouldEndSession': True
         }
     }
+
+def error_response():
+    return build_response("Request error", "I'm sorry, your request could not be completed!")
+

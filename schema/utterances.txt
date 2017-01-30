@@ -1,2 +1,3 @@
 GetBalance what my balance is
 GetBalance to get my balance
+GetBalance to show me the money

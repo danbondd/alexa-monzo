@@ -2,6 +2,9 @@
   "intents": [
     {
       "intent": "GetBalance"
+    },
+    {
+      "intent" : "AMAZON.NoIntent"
     }
   ]
 }
