@@ -26,6 +26,8 @@ def intent_request(request):
 
     if intent_name == "GetBalance":
         return balance.get_balance(access_token, account_id)
+    elif intent_name == "GetSpendToday":
+        return balance.get_spend_today(access_token, account_id)
     elif intent_name == "AMAZON.NoIntent":
         return build_response("Invalid command", "I'm sorry, I did not understand your request.")
 

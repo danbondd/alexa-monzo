@@ -47,4 +47,5 @@ Once the above steps are completed, you should be good to go!
 To see all accepted phrases, visit the `schema/utterances.txt` file.
 
 - Monzo Balance
-    - E.g. `Alexa, ask Monzo what my balance is.`
+    - `Alexa, ask Monzo what my balance is.`
+    - `Alexa, ask Monzo how much I've spent today.`

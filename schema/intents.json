@@ -4,6 +4,9 @@
       "intent": "GetBalance"
     },
     {
+      "intent": "GetSpendToday"
+    },
+    {
       "intent" : "AMAZON.NoIntent"
     }
   ]

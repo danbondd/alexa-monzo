@@ -1,3 +1,7 @@
 GetBalance what my balance is
 GetBalance to get my balance
 GetBalance to show me the money
+
+GetSpendToday how much I've spent today
+GetSpendToday how much I have spent today
+GetSpendToday what the damage is
