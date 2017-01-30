@@ -3,6 +3,7 @@
 An unofficial Alexa Skill for interacting with the Monzo API.
 
 _**Disclaimer:** This application is a work in progress, it is not yet stable._
+
 _**Prerequisites:** This application requires an [AWS](http://aws.amazon.com) account and a [Monzo](https://monzo.com) account._
 
 ## Installation
