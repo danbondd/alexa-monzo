@@ -11,11 +11,8 @@ def lambda_handler(event, context):
     if request_type == "IntentRequest":
         return intent_request(event['request'])
     elif request_type == "LaunchRequest":
-        # TODO
-        return build_response("", "")
-    elif request_type == "SessionEndedRequest":
-        # TODO
-        return build_response("", "")
+        print "LaunchRequest - No intent provided"
+        return build_response("Monzo - Welcome", "Welcome to Monzo! Get started by asking me about your balance or recent transactions.")
 
 def intent_request(request):
     # Temp workaround for OAuth issue
@@ -29,7 +26,7 @@ def intent_request(request):
     elif intent_name == "GetSpendToday":
         return balance.get_spend_today(access_token, account_id)
     elif intent_name == "AMAZON.NoIntent":
-        return build_response("Invalid command", "I'm sorry, I did not understand your request.")
+        return build_response("Invalid command", "I'm sorry, I didn't understand your request.")
 
 def build_response(title, output):
     return {
