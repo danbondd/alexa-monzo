@@ -18,6 +18,13 @@ GetCardStatus is my card deactivated
 
 BlockCard to block my card
 BlockCard to deactivate my card
-BlockCard to frezze my card
+BlockCard to freeze my card
 BlockCard to turn off my card
 BlockCard to stop me from spending
+
+UnblockCard to unblock my card
+UnblockCard to activate my card
+UnblockCard to unfreeze my card
+UnblockCard to defrost my card
+UnblockCard to turn on my card
+UnblockCard to let the spending begin

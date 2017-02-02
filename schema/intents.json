@@ -26,6 +26,9 @@
          "intent":"BlockCard"
       },
       {
+	"intent":"UnblockCard"
+      },
+      {
          "intent":"AMAZON.HelpIntent"
       }
    ]

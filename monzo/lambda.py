@@ -35,6 +35,8 @@ def intent_request(request, access_token):
 	return card.get_status(access_token, account_id)
     elif intent_name == "BlockCard":
         return card.block_card(access_token, account_id)
+    elif intent_name == "UnblockCard":
+        return card.unblock_card(access_token, account_id)
     elif intent_name == "AMAZON.HelpIntent":
         return response.build("Help", "Try asking me about your balance, or recent transactions.")
     else:
