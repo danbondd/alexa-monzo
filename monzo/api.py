@@ -12,16 +12,21 @@ CARD_TOGGLE_URI = "card/toggle"
 
 def request(uri, params, access_token, method='GET'):
     headers = {"Authorization": "Bearer %s" % access_token}
-    
+
     urllib3.disable_warnings()
     http = urllib3.PoolManager()
-    
+
     if method == 'PUT':
         uri += "?%s" % urlencode(params)
         params = None
 
     try:
-        r = http.request(method, "%s%s" % (BASE_URL, uri), fields=params, headers=headers)
+        r = http.request(
+            method,
+            "%s%s" % (BASE_URL, uri),
+            fields=params,
+            headers=headers
+        )
     except Exception as e:
         print e
         return None

@@ -15,5 +15,9 @@ def build(title, output, session=True):
         }
     }
 
+
 def error():
-    return build("Request error", "I'm sorry, your request could not be completed - please try again.")
+    return build(
+        "Request error",
+        "I'm sorry, your request could not be completed - please try again."
+    )

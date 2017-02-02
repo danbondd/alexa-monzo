@@ -5,6 +5,7 @@ import card
 import response
 import transactions
 
+
 def handler(event, context):
     if event['session']['application']['applicationId'] != os.environ['APP_ID']:
         print "Invalid Application ID"
@@ -20,6 +21,7 @@ def handler(event, context):
         print "LaunchRequest - No intent provided"
         return response.build("Welcome", "Welcome to Monzo! Get started by asking me about your balance or recent transactions.")
 
+
 def intent_request(request, access_token):
     account_id = os.environ['ACCOUNT_ID']
     intent = request['intent']
@@ -32,7 +34,7 @@ def intent_request(request, access_token):
     elif intent_name == "GetTransactions":
         return transactions.get_transactions(access_token, account_id, intent['slots'])
     elif intent_name == "GetCardStatus":
-	return card.get_status(access_token, account_id)
+        return card.get_status(access_token, account_id)
     elif intent_name == "BlockCard":
         return card.block_card(access_token, account_id)
     elif intent_name == "UnblockCard":
@@ -41,4 +43,3 @@ def intent_request(request, access_token):
         return response.build("Help", "Try asking me about your balance, or recent transactions.")
     else:
         return response.build("Invalid command", "I'm sorry, I didn't understand your request.")
-
