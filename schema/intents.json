@@ -1,29 +1,32 @@
 {
-  "intents": [
-    {
-      "intent": "GetBalance"
-    },
-    {
-      "intent": "GetSpendToday"
-    },
-    {
-      "intent": "GetTransactions",
-      "slots": [
-        {
-          "name": "duration",
-          "type": "AMAZON.DURATION"
-        },
-	{
-	  "name": "category",
-	  "type": "TRANSACTION_CATEGORY"
-	}
-      ]
-    },
-    {
-      "intent": "GetCardStatus"
-    },
-    {
-      "intent" : "AMAZON.HelpIntent"
-    }
-  ]
+   "intents":[
+      {
+         "intent":"GetBalance"
+      },
+      {
+         "intent":"GetSpendToday"
+      },
+      {
+         "intent":"GetTransactions",
+         "slots":[
+            {
+               "name":"duration",
+               "type":"AMAZON.DURATION"
+            },
+            {
+               "name":"category",
+               "type":"TRANSACTION_CATEGORY"
+            }
+         ]
+      },
+      {
+         "intent":"GetCardStatus"
+      },
+      {
+         "intent":"BlockCard"
+      },
+      {
+         "intent":"AMAZON.HelpIntent"
+      }
+   ]
 }

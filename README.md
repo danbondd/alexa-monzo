@@ -59,3 +59,4 @@ To see all accepted phrases, visit the `schema/utterances.txt` file.
 
 - Card
     - `Alexa, ask Monzo what my card status is.`
+    - `Alexa, ask Monzo to block my card.`

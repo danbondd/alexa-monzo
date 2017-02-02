@@ -1,25 +1,33 @@
 import json
-import urllib2
+import urllib3
+
+from urllib import urlencode
 
 BASE_URL = "https://api.monzo.com/"
 BALANCE_URI = "balance"
 TRANSACTIONS_URI = "transactions"
 CARD_LIST_URI = "card/list"
+CARD_TOGGLE_URI = "card/toggle"
 
-def do_request(uri, access_token):
-    req = urllib2.Request(uri)
-    req.add_header("Authorization", "Bearer %s" % access_token)
+
+def request(uri, params, access_token, method='GET'):
+    headers = {"Authorization": "Bearer %s" % access_token}
+    
+    urllib3.disable_warnings()
+    http = urllib3.PoolManager()
+    
+    if method == 'PUT':
+        uri += "?%s" % urlencode(params)
+        params = None
 
     try:
-        res = urllib2.urlopen(req)
-        data = res.read()
-        res.close()
-    except urllib2.HTTPError as e:  
-        print "Invalid HTTP response code: %s" % e.code
+        r = http.request(method, "%s%s" % (BASE_URL, uri), fields=params, headers=headers)
+    except Exception as e:
+        print e
         return None
-    except urllib2.URLError as e:
-        print "Error performing request: %s" % e
-        return None
-    
-    return json.loads(data)
 
+    if r.status is not 200:
+        print "Invalid status code: %s" % r.status
+        return None
+
+    return json.loads(r.data)

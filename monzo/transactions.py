@@ -11,7 +11,6 @@ def get_transactions(access_token, account_id, slots):
     	return response.error()
 
     category = None
-    	
     if "value" in slots['category']:
     	category = slots['category']['value']
 
@@ -22,11 +21,11 @@ def get_transactions(access_token, account_id, slots):
     # TODO add timezone correctly
     date = "%sZ" % date.isoformat()
 
-    url = "%s%s?account_id=%s&since=%s" % (api.BASE_URL, api.TRANSACTIONS_URI, account_id, date)
+    params = {"account_id": account_id, "since": date}
     if category is not None:
-    	url = "%s&category=%s" % (url, category.replace(" ", "_"))
+        params['category'] = category.replace(" ", "_")
 
-    res = api.do_request(url, access_token)
+    res = api.request(api.TRANSACTIONS_URI, params, access_token)
     
     if res == None:
 	return response.error()
@@ -42,4 +41,5 @@ def get_transactions(access_token, account_id, slots):
     output = "In the last %s, you've spent %s" % (utils.duration_to_words(duration), utils.speakable_currency(total))
     if category is not None:
     	output = "%s on %s" % (output, category)
+
     return response.build("Get Transactions", output)

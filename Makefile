@@ -2,7 +2,7 @@ DIR = $(shell pwd)
 
 zip:
 	zip -j9 lambda.zip monzo/*.py
-	cd venv/lib/python2.7/site-packages/ && zip -9 $(DIR)/lambda.zip isodate/*.py
+	cd venv/lib/python2.7/site-packages/ && zip -r9 $(DIR)/lambda.zip isodate/*.py urllib3
 
 test:
 	nosetests --with-coverage

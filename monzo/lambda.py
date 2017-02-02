@@ -33,6 +33,8 @@ def intent_request(request, access_token):
         return transactions.get_transactions(access_token, account_id, intent['slots'])
     elif intent_name == "GetCardStatus":
 	return card.get_status(access_token, account_id)
+    elif intent_name == "BlockCard":
+        return card.block_card(access_token, account_id)
     elif intent_name == "AMAZON.HelpIntent":
         return response.build("Help", "Try asking me about your balance, or recent transactions.")
     else:

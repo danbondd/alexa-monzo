@@ -15,3 +15,9 @@ GetCardStatus what my card status is
 GetCardStatus is my card active
 GetCardStatus is my card activated
 GetCardStatus is my card deactivated
+
+BlockCard to block my card
+BlockCard to deactivate my card
+BlockCard to frezze my card
+BlockCard to turn off my card
+BlockCard to stop me from spending

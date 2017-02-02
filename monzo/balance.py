@@ -19,7 +19,7 @@ def get_spend_today(access_token, account_id):
     return response.build("Spent Today", output)
 
 def balance_request(access_token, account_id):
-    url = "%s%s?account_id=%s" % (api.BASE_URL, api.BALANCE_URI, account_id)
-    res = api.do_request(url, access_token)
+    params = {"account_id": account_id}
+    res = api.request(api.BALANCE_URI, params, access_token)
     return res
 
