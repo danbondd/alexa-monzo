@@ -6,6 +6,20 @@
     {
       "intent": "GetSpendToday"
     },
+    {
+      "intent": "GetTransactions",
+      "slots": [
+        {
+          "name": "duration",
+          "type": "AMAZON.DURATION"
+        },
+	{
+	  "name": "category",
+	  "type": "TRANSACTION_CATEGORY"
+	}
+      ]
+    },
+    {
       "intent" : "AMAZON.HelpIntent"
     }
   ]

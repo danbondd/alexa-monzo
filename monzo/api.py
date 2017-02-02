@@ -3,6 +3,7 @@ import urllib2
 
 BASE_URL = "https://api.monzo.com/"
 BALANCE_URI = "balance"
+TRANSACTIONS_URI = "transactions"
 
 def do_request(uri, access_token):
     req = urllib2.Request(uri)

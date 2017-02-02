@@ -1,0 +1,11 @@
+TRANSACTION_CATEGORY
+bills
+cash
+eating out
+entertainment
+expenses
+general
+groceries
+holidays
+shopping
+transport

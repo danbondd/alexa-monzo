@@ -5,3 +5,7 @@ GetBalance to show me the money
 GetSpendToday how much I've spent today
 GetSpendToday how much I have spent today
 GetSpendToday what the damage is
+
+GetTransactions how much have I spent in that last {duration}
+GetTransactions how much have I spent on {category} in the last {duration}
+GetTransactions in the last {duration} how much have I spent on {category}

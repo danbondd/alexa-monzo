@@ -1,2 +1,5 @@
 *.zip
+.coverage
+venv
 .DS_STORE
+.pyc

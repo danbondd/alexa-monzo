@@ -1,4 +1,4 @@
-# Alexa Monzo
+# Alexa Monzo [![Build Status](https://travis-ci.org/danbondd/alexa-monzo.svg?branch=master)](https://travis-ci.org/danbondd/alexa-monzo)
 
 An unofficial Alexa Skill for interacting with the Monzo API.
 
@@ -13,7 +13,8 @@ _**Prerequisites:** This application requires an [AWS](http://aws.amazon.com) ac
 - Create a [Monzo OAuth Client](https://developers.getmondo.co.uk/apps/home) and make a note of the `client_id` and `client_secret`.
 
 **Lambda**
-- Clone repository to your local machine and run the `make zip` command.
+- Clone repository to your local machine and run the `make venv` command to configure your environment.
+- Once you have a working `virtualenv`, run the `make zip` command to create the `lambda.zip` file.
 - Sign in to your [AWS](https://aws.amazon.com) account and create a Lambda function for a [custom Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function).
     - Python 2.7
     - Upload the `lambda.zip` file created in step one.
@@ -51,3 +52,7 @@ To see all accepted phrases, visit the `schema/utterances.txt` file.
 - Balance
     - `Alexa, ask Monzo what my balance is.`
     - `Alexa, ask Monzo how much I've spent today.`
+
+- Transactions
+    - `Alexa, ask Monzo how much I've spent in the last 7 days.`
+    - `Alexa, ask Monzo how much I've spent on transport in the last month.`

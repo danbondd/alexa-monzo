@@ -1,7 +1,9 @@
-import balance
 import os
 
-def lambda_handler(event, context):
+import balance
+import transactions
+
+def handler(event, context):
     if event['session']['application']['applicationId'] != os.environ['APP_ID']:
         print "Invalid Application ID"
         return error_response()
@@ -24,12 +26,14 @@ def intent_request(request, access_token):
         return balance.get_balance(access_token, account_id)
     elif intent_name == "GetSpendToday":
         return balance.get_spend_today(access_token, account_id)
+    elif intent_name == "GetTransactions":
+        return transactions.get_transactions(access_token, account_id, intent['slots'])
     elif intent_name == "AMAZON.HelpIntent":
         return build_response("Help", "Try asking me about your balance, or recent transactions.")
     else:
         return build_response("Invalid command", "I'm sorry, I didn't understand your request.")
 
-def build_response(title, output):
+def build_response(title, output, session=True):
     return {
         'version': '1.0',
         'response': {
@@ -42,10 +46,10 @@ def build_response(title, output):
                 'title': title,
                 'content': output
             },
-            'shouldEndSession': True
+            'shouldEndSession': session
         }
     }
 
 def error_response():
-    return build_response("Request error", "I'm sorry, your request could not be completed.")
+    return build_response("Request error", "I'm sorry, your request could not be completed - please try again.")
 
