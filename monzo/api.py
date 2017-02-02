@@ -4,6 +4,7 @@ import urllib2
 BASE_URL = "https://api.monzo.com/"
 BALANCE_URI = "balance"
 TRANSACTIONS_URI = "transactions"
+CARD_LIST_URI = "card/list"
 
 def do_request(uri, access_token):
     req = urllib2.Request(uri)
@@ -19,6 +20,6 @@ def do_request(uri, access_token):
     except urllib2.URLError as e:
         print "Error performing request: %s" % e
         return None
-    else:
-        return json.loads(data)
+    
+    return json.loads(data)
 

@@ -2,4 +2,4 @@
 .coverage
 venv
 .DS_STORE
-.pyc
+*.pyc

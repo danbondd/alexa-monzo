@@ -9,3 +9,9 @@ GetSpendToday what the damage is
 GetTransactions how much have I spent in that last {duration}
 GetTransactions how much have I spent on {category} in the last {duration}
 GetTransactions in the last {duration} how much have I spent on {category}
+
+GetCardStatus what is my card status
+GetCardStatus what my card status is
+GetCardStatus is my card active
+GetCardStatus is my card activated
+GetCardStatus is my card deactivated

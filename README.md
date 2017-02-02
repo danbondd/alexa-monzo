@@ -56,3 +56,6 @@ To see all accepted phrases, visit the `schema/utterances.txt` file.
 - Transactions
     - `Alexa, ask Monzo how much I've spent in the last 7 days.`
     - `Alexa, ask Monzo how much I've spent on transport in the last month.`
+
+- Card
+    - `Alexa, ask Monzo what my card status is.`

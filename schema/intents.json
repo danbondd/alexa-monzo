@@ -20,6 +20,9 @@
       ]
     },
     {
+      "intent": "GetCardStatus"
+    },
+    {
       "intent" : "AMAZON.HelpIntent"
     }
   ]

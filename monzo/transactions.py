@@ -1,13 +1,14 @@
-import api
 import isodate
-import monzo
+
+import api
+import response
 import utils
 
 from datetime import datetime, timedelta
 
 def get_transactions(access_token, account_id, slots):
     if "value" not in slots['duration']:
-    	return monzo.error_response()
+    	return response.error()
 
     category = None
     	
@@ -28,7 +29,7 @@ def get_transactions(access_token, account_id, slots):
     res = api.do_request(url, access_token)
     
     if res == None:
-	return monzo.error_response()
+	return response.error()
 
     total = 0
     for transaction in res['transactions']:
@@ -41,4 +42,4 @@ def get_transactions(access_token, account_id, slots):
     output = "In the last %s, you've spent %s" % (utils.duration_to_words(duration), utils.speakable_currency(total))
     if category is not None:
     	output = "%s on %s" % (output, category)
-    return monzo.build_response("Get Transactions", output)
+    return response.build("Get Transactions", output)
