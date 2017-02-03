@@ -27,20 +27,20 @@ def get_transactions(access_token, account_id, slots):
         params['category'] = category.replace(" ", "_")
 
     res = api.request(api.TRANSACTIONS_URI, params, access_token)
-
     if res is None:
         return response.error()
 
     total = 0
     for transaction in res['transactions']:
-        if category is not None:
-            if transaction['category'] == category:
+        if transaction['category'] is not "mondo":
+            if category is not None:
+                if transaction['category'] == category:
+                    total += transaction['amount']
+            else:
                 total += transaction['amount']
-        else:
-            total += transaction['amount']
 
-    output = "In the last %s, you've spent %s"
-    % (utils.duration_to_words(duration), utils.speakable_currency(total))
+    output = "In the last %s, you've spent %s" % (
+        utils.duration_to_words(duration), utils.speakable_currency(total))
 
     if category is not None:
         output = "%s on %s" % (output, category)
