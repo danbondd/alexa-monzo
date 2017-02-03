@@ -12,8 +12,7 @@ def handler(event, context):
         return response.error()
 
     request_type = event['request']['type']
-    access_token = os.environ['ACCESS_TOKEN']
-    #access_token = event['session']['user']['accessToken']
+    access_token = event['session']['user']['accessToken']
 
     if request_type == "IntentRequest":
         return intent_request(event['request'], access_token)
