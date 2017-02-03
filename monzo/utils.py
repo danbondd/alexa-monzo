@@ -12,7 +12,6 @@ def speakable_currency(pence):
     pounds = pence_to_pounds(pence)
     units = pounds.split(".")
     output = units[0]
-    output = output.replace("-", "")
 
     if units[0] == "1":
         output += " pound and "

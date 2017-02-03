@@ -5,7 +5,7 @@ zip:
 	cd venv/lib/python2.7/site-packages/ && zip -r9 $(DIR)/lambda.zip isodate/*.py urllib3
 
 test:
-	nosetests --with-coverage
+	nosetests
 
 update-lambda: zip
 	aws lambda update-function-code --function-name alexa-monzo --zip-file fileb://lambda.zip

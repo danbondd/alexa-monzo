@@ -1,0 +1,291 @@
+{
+  "transactions": [
+    {
+      "amount": -385,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -1169,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -135,
+      "currency": "GBP",
+      "category": "eating_out",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -1205,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -235,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -515,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -1439,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -850,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": 999,
+      "currency": "GBP",
+      "category": "mondo",
+      "is_load": true,
+      "include_in_spending": false
+    },
+    {
+      "amount": -999,
+      "currency": "GBP",
+      "category": "shopping",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -850,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -4499,
+      "currency": "GBP",
+      "category": "shopping",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -999,
+      "currency": "GBP",
+      "category": "shopping",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -620,
+      "currency": "GBP",
+      "category": "eating_out",
+      "is_load": true,
+      "include_in_spending": true
+    },
+    {
+      "amount": -780,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": 1,
+      "currency": "GBP",
+      "category": "mondo",
+      "is_load": true,
+      "include_in_spending": false
+    },
+    {
+      "amount": 1,
+      "currency": "GBP",
+      "category": "mondo",
+      "is_load": true,
+      "include_in_spending": false
+    },
+    {
+      "amount": -95,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -1805,
+      "currency": "GBP",
+      "category": "eating_out",
+      "is_load": true,
+      "include_in_spending": true
+    },
+    {
+      "amount": -95,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -750,
+      "currency": "GBP",
+      "category": "eating_out",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -630,
+      "currency": "GBP",
+      "category": "eating_out",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": 0,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": false
+    },
+    {
+      "amount": -413,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -3760,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -220,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -99,
+      "currency": "GBP",
+      "category": "shopping",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -2000,
+      "currency": "GBP",
+      "category": "bills",
+      "is_load": true,
+      "include_in_spending": true
+    },
+    {
+      "amount": -390,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -480,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -520,
+      "currency": "GBP",
+      "category": "eating_out",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -895,
+      "currency": "GBP",
+      "category": "eating_out",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -220,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -105,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": 0,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": false
+    },
+    {
+      "amount": -185,
+      "currency": "GBP",
+      "category": "transport",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -300,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -135,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -100,
+      "currency": "GBP",
+      "category": "shopping",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -220,
+      "currency": "GBP",
+      "category": "groceries",
+      "is_load": false,
+      "include_in_spending": true
+    },
+    {
+      "amount": -1002,
+      "currency": "GBP",
+      "category": "shopping",
+      "is_load": false,
+      "include_in_spending": true
+    }
+  ]
+}
