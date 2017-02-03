@@ -19,7 +19,7 @@ def get_spend_today(access_token, account_id):
         return response.error()
 
     spend_today = res['spend_today']
-    output = "Today you've spent %s" % utils.speakable_currency(spend_today)
+    output = "Today you've spent %s" % utils.speakable_currency(abs(spend_today))
     return response.build("Spent Today", output)
 
 
