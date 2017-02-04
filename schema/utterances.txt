@@ -1,16 +1,23 @@
 GetBalance what my balance is
 GetBalance to get my balance
 GetBalance to show me the money
+GetBalance how much money I have
+GetBalance how much my balance is
 
 GetSpendToday how much I've spent today
 GetSpendToday how much I have spent today
+GetSpendToday how much have I spent today
 GetSpendToday what the damage is
 
+GetTransactions how much I've spent in that last {duration}
 GetTransactions how much have I spent in that last {duration}
+GetTransactions how much I've spent on {category} in the last {duration}
 GetTransactions how much have I spent on {category} in the last {duration}
 GetTransactions in the last {duration} how much have I spent on {category}
+GetTransactions in the last {duration} how much I've spent on {category}
 
 GetCardStatus what is my card status
+GetCardStatus what's my card status
 GetCardStatus what my card status is
 GetCardStatus is my card active
 GetCardStatus is my card activated
