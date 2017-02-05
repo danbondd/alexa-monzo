@@ -11,8 +11,11 @@ def handler(event, context):
         print "Invalid Application ID"
         return response.error()
 
-    request_type = event['request']['type']
+    if "accessToken" not in event['session']['user']:
+        return response.build("Authentication Error", "I'm sorry, there was a problem authenticating with your Monzo account.")
+
     access_token = event['session']['user']['accessToken']
+    request_type = event['request']['type']
 
     if request_type == "IntentRequest":
         return intent_request(event['request'], access_token)
