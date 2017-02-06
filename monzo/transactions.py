@@ -19,7 +19,6 @@ def get_transactions(access_token, account_id, slots):
     td_duration = isodate.parse_duration(duration)
     now = datetime.utcnow()
     date = now - td_duration
-    # TODO add timezone correctly
     date = "%sZ" % date.isoformat()
 
     params = {"account_id": account_id, "since": date}
@@ -28,6 +27,7 @@ def get_transactions(access_token, account_id, slots):
 
     res = api.request(api.TRANSACTIONS_URI, params, access_token)
     if res is None:
+        print "error getting transactions"
         return response.error()
 
     total = calculate_total(res['transactions'], category)

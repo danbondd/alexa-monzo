@@ -29,6 +29,8 @@ def intent_request(request, access_token):
     intent = request['intent']
     intent_name = intent['name']
 
+    print "IntentRequest: %s" % intent_name
+
     if intent_name == "GetBalance":
         return balance.get_balance(access_token, account_id)
     elif intent_name == "GetSpendToday":
