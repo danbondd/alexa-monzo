@@ -9,6 +9,7 @@ _**Prerequisites:** This application requires an [AWS](http://aws.amazon.com) ac
 **Monzo OAuth Client**
 
 - Create a [Monzo OAuth Client](https://developers.getmondo.co.uk/apps/home) and make a note of the `client_id` and `client_secret`.
+- The client must be set to confidential and **NOT** public.
 
 **Lambda**
 - Clone repository to your local machine and run the `make venv` command to configure your environment.
