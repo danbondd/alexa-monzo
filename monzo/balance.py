@@ -6,7 +6,7 @@ import utils
 def get_balance(access_token, account_id):
     res = balance_request(access_token, account_id)
     if res is None:
-        print "error getting balance"
+        print("error getting balance")
         return response.error()
 
     balance = res['balance']
@@ -17,7 +17,7 @@ def get_balance(access_token, account_id):
 def get_spend_today(access_token, account_id):
     res = balance_request(access_token, account_id)
     if res is None:
-        print "error getting spend today"
+        print("error getting spend today")
         return response.error()
 
     spend_today = res['spend_today']

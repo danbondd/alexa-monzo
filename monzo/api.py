@@ -1,7 +1,7 @@
 import json
 import urllib3
 
-from urllib import urlencode
+from urllib.parse import urlencode
 
 BASE_URL = "https://api.monzo.com/"
 BALANCE_URI = "balance"
@@ -28,11 +28,11 @@ def request(uri, params, access_token, method='GET'):
             headers=headers
         )
     except Exception as e:
-        print e
+        print(e)
         return None
 
     if r.status is not 200:
-        print "Invalid status code: %s" % r.status
+        print("Invalid status code: %s" % r.status)
         return None
 
     return json.loads(r.data)

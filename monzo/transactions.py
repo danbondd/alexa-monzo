@@ -27,10 +27,10 @@ def get_transactions(access_token, account_id, slots):
 
     res = api.request(api.TRANSACTIONS_URI, params, access_token)
     if res is None:
-        print "error getting transactions"
+        print("error getting transactions")
         return response.error()
 
-    total = calculate_total(res['transactions'], category)
+    total = utils.calculate_total(res['transactions'], category)
 
     output = "In the last %s, you've spent %s" % (
         utils.duration_to_words(duration), utils.speakable_currency(total))
@@ -39,16 +39,3 @@ def get_transactions(access_token, account_id, slots):
         output = "%s on %s" % (output, category)
 
     return response.build("Get Transactions", output)
-
-
-def calculate_total(transactions, category):
-    total = 0
-    for transaction in transactions:
-        if transaction['include_in_spending']:
-            if category is not None:
-                if transaction['category'] == category:
-                    total += transaction['amount']
-            else:
-                total += transaction['amount']
-    
-    return abs(total)

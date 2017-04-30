@@ -1,6 +1,17 @@
-from __future__ import division
-
 import re
+
+
+def calculate_total(transactions, category):
+    total = 0
+    for transaction in transactions:
+        if transaction['include_in_spending']:
+            if category is not None:
+                if transaction['category'] == category:
+                    total += transaction['amount']
+            else:
+                total += transaction['amount']
+    
+    return abs(total)
 
 
 def pence_to_pounds(pence):

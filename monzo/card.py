@@ -32,13 +32,13 @@ def unblock_card(access_token, account_id):
 def toggle_card(access_token, account_id, action):
     res = card_request(access_token, account_id)
     if res is None:
-        print "error getting card details"
+        print("error getting card details")
         return False
 
     params = {"card_id": res['cards'][0]['id'], "status": action}
     blocked = api.request(api.CARD_TOGGLE_URI, params, access_token, 'PUT')
     if blocked is None:
-        print "error toggling card status"
+        print("error toggling card status")
         return False
 
     return True

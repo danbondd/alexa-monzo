@@ -8,7 +8,7 @@ import transactions
 
 def handler(event, context):
     if event['session']['application']['applicationId'] != os.environ['APP_ID']:
-        print "Invalid Application ID"
+        print("Invalid Application ID")
         return response.error()
 
     if "accessToken" not in event['session']['user']:
@@ -20,7 +20,7 @@ def handler(event, context):
     if request_type == "IntentRequest":
         return intent_request(event['request'], access_token)
     elif request_type == "LaunchRequest":
-        print "LaunchRequest - No intent provided"
+        print("LaunchRequest - No intent provided")
         return response.build("Welcome", "Welcome to Monzo! Get started by asking me about your balance or recent transactions.")
 
 
@@ -29,7 +29,7 @@ def intent_request(request, access_token):
     intent = request['intent']
     intent_name = intent['name']
 
-    print "IntentRequest: %s" % intent_name
+    print("IntentRequest: %s" % intent_name)
 
     if intent_name == "GetBalance":
         return balance.get_balance(access_token, account_id)

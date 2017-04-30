@@ -15,8 +15,8 @@ _**Prerequisites:** This application requires an [AWS](http://aws.amazon.com) ac
 - Clone repository to your local machine and run the `make venv` command to configure your environment.
 - Once you have a working `virtualenv`, run the `make zip` command to create the `lambda.zip` file.
 - Sign in to your [AWS](https://aws.amazon.com) account and create a Lambda function for a [custom Alexa Skill](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/developing-an-alexa-skill-as-a-lambda-function).
-    - Python 2.7
-    - Upload the `lambda.zip` file created in step one.
+    - Python 3.6
+    - Upload the `lambda.zip` file created in step one (use `make update-lambda` if you have the AWS CLI configured).
     - Create an `ACCOUNT_ID` environment variable and set it to the Owner ID value provided in your [Monzo OAuth Client](https://developers.getmondo.co.uk/apps/home).
     - Create an `APP_ID` environment variable - _leave this blank, we'll come back to it later_.
     - Configure any other application properties (role, description, etc) to your liking.
