@@ -1,4 +1,4 @@
-# Alexa Monzo [![Build Status](https://travis-ci.org/danbondd/alexa-monzo.svg?branch=master)](https://travis-ci.org/danbondd/alexa-monzo)
+# Alexa Monzo [![Build Status](https://travis-ci.org/syscll/alexa-monzo.svg?branch=master)](https://travis-ci.org/syscll/alexa-monzo)
 
 An unofficial Alexa Skill for interacting with the Monzo API.
 
